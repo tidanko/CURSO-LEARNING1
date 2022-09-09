@@ -1,0 +1,14 @@
+--- laura/kyu7.py	2022-09-09 09:50:11.339629192 -0300
++++ carlos/kyu7.py	2022-09-09 09:50:11.339629192 -0300
+@@ -45,9 +45,8 @@
+ 
+     @staticmethod
+     def high_and_low(numbers):
+-        # ...
+-        return numbers
+-
++        list = [int(num) for num in numbers.split()]
++        return f"{max(list)} {min(list)}"
+ 
+ class VowelCount:
+     # Return the number (count) of vowels in the given string.

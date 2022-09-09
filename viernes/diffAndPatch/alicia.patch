@@ -1,0 +1,15 @@
+--- laura/kyu7.py	2022-09-09 09:50:11.339629192 -0300
++++ alicia/kyu7.py	2022-09-09 09:50:11.339629192 -0300
+@@ -11,7 +11,11 @@
+ 
+     @staticmethod
+     def friend(x):
+-        return x
++        friends = []
++        for person in x:
++            if len(person) == 4:
++                friends.append(person)
++        return friends
+ 
+ class RegexValidatePinCode:
+     # ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.

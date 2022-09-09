@@ -1,0 +1,48 @@
+--- laura/kyu7.py	2022-09-09 09:50:11.339629192 -0300
++++ victor/kyu7.py	2022-09-09 09:50:11.339629192 -0300
+@@ -13,6 +13,7 @@
+     def friend(x):
+         return x
+ 
++
+ class RegexValidatePinCode:
+     # ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+     #
+@@ -25,7 +26,7 @@
+ 
+     @staticmethod
+     def validate_pin(pin):
+-        pass
++        return all(x.isdigit() for x in pin) and len(pin) in (4,6)
+ 
+ class HighestAndLowest:
+     # In this little assignment you are given a string of space separated numbers,
+@@ -45,8 +46,15 @@
+ 
+     @staticmethod
+     def high_and_low(numbers):
+-        # ...
+-        return numbers
++        nums = numbers.split(" ")
++        mas_alto = nums[0]
++        mas_bajo = nums[0]
++        for num in nums:
++            if int(num) > int(mas_alto):
++                mas_alto = num
++            if int(num) < int(mas_bajo):
++                mas_bajo = num
++        return mas_alto + ' ' + mas_bajo
+ 
+ 
+ class VowelCount:
+@@ -56,4 +64,8 @@
+ 
+     @staticmethod
+     def getCount(sentence):
+-        pass
+\ No newline at end of file
++        num_vowels = 0
++        for char in sentence:
++            if char in "aeiou":
++                num_vowels = num_vowels + 1
++        return num_vowels

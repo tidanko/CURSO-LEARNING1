@@ -1,0 +1,12 @@
+--- laura/kyu7.py	2022-09-09 09:50:11.339629192 -0300
++++ berto/kyu7.py	2022-09-09 09:50:11.339629192 -0300
+@@ -25,7 +25,8 @@
+ 
+     @staticmethod
+     def validate_pin(pin):
+-        pass
++        return (len(pin) == 4 or len(pin) == 6) and (pin.isnumeric())
++
+ 
+ class HighestAndLowest:
+     # In this little assignment you are given a string of space separated numbers,
